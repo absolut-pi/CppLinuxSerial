@@ -15,7 +15,7 @@
 #include <unistd.h>     // UNIX standard function definitions
 #include <fcntl.h>      // File control definitions
 #include <errno.h>      // Error number definitions
-// #include <termios.h>     // POSIX terminal control definitions (struct termios)
+#include <termios.h>     // POSIX terminal control definitions (struct termios)
 #include <system_error>	// For throwing std::system_error
 #include <sys/ioctl.h> // Used for TCGETS2, which is required for custom baud rates
 #include <cassert>
