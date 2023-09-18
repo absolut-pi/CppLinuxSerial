@@ -15,6 +15,7 @@
 #include <string>
 #include <fstream> // For file I/O (reading/writing to COM port)
 #include <sstream>
+#include <cstdint>
 // #include <termios.h> // POSIX terminal control definitions (struct termios)
 // #include <asm/termios.h> // Terminal control definitions (struct termios)
 #include <vector>
