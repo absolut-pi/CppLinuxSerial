@@ -8,6 +8,7 @@
 //!             See README.rst in repo root dir for more info.
 
 // System includes
+#include <termios.h>
 #include <iostream>
 #include <sstream>
 #include <stdio.h>      // Standard input/output definitions
@@ -19,8 +20,6 @@
 #include <system_error>	// For throwing std::system_error
 #include <sys/ioctl.h> // Used for TCGETS2, which is required for custom baud rates
 #include <cassert>
-#define _POSIX_SOURCE
-#include <termios.h>
 // #include <asm/termios.h> // Terminal control definitions (struct termios)
 #include <asm/ioctls.h>
 #include <asm/termbits.h>
