@@ -25,7 +25,9 @@
 #include <algorithm>
 #include <iterator>
 
-int	tcflush(int, int);
+extern "C" { 
+    int	tcflush(int, int);
+}
 
 // User includes
 #include "CppLinuxSerial/Exception.hpp"
