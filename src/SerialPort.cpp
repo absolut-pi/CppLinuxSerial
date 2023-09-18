@@ -557,7 +557,7 @@ namespace CppLinuxSerial {
                 throw std::system_error(EFAULT, std::system_category());
             }
         } else if(n > 0) {
-            std::copy(readBuffer_.begin(), readBuffer_.begin() + n, back_inserter(data));
+            std::copy(readBuffer_.begin(), readBuffer_.begin() + n, std::back_inserter(data));
         }
 
         // If code reaches here, read must of been successful
