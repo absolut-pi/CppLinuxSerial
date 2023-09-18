@@ -533,7 +533,7 @@ namespace CppLinuxSerial {
         }
 
         // If code reaches here, read must of been successful
-        tcflush(fileDesc, TCIFLUSH);
+        tcflush(fileDesc_, TCIFLUSH);
     }
 
     void SerialPort::ReadBinary(std::vector<uint8_t>& data) {
@@ -562,7 +562,7 @@ namespace CppLinuxSerial {
         }
 
         // If code reaches here, read must of been successful
-        tcflush(fileDesc, TCIFLUSH);
+        tcflush(fileDesc_, TCIFLUSH);
     }
 
     // termios SerialPort::GetTermios() {
