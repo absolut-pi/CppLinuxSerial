@@ -20,11 +20,13 @@
 #include <system_error>	// For throwing std::system_error
 #include <sys/ioctl.h> // Used for TCGETS2, which is required for custom baud rates
 #include <cassert>
-// #include <asm/termios.h> // Terminal control definitions (struct termios)
+#include <asm/termios.h> // Terminal control definitions (struct termios)
 #include <asm/ioctls.h>
 #include <asm/termbits.h>
 #include <algorithm>
 #include <iterator>
+
+int	tcflush(int, int);
 
 // User includes
 #include "CppLinuxSerial/Exception.hpp"
@@ -534,6 +536,7 @@ namespace CppLinuxSerial {
         }
 
         // If code reaches here, read must of been successful
+        sleep(2);
         tcflush(fileDesc_, TCIFLUSH);
     }
 
@@ -563,6 +566,7 @@ namespace CppLinuxSerial {
         }
 
         // If code reaches here, read must of been successful
+        sleep(2);
         tcflush(fileDesc_, TCIFLUSH);
     }
 
